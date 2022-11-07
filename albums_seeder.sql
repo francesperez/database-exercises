@@ -23,4 +23,12 @@ VALUES ('Michael Jackson','Thriller', 1982, 70, 'Pop'),
 ('Guns N'' Roses','Appetite for Destruction', 1987	, 30, 'Hard rock'),
 ('Bruce Springsteen','Born in the U.S.A.', 1984, 30, 'Heartland rock'),
 ('ABBA','Gold: Greatest Hits',1992 , 30, 'Pop, Disco'),
-('Dire Straits','Brothers in Arms', 1985, 30, 'Roots Rock')
+('Dire Straits','Brothers in Arms', 1985, 30, 'Roots Rock'),
+('Santana','Supernatural', 1999, 30, 'Latin Rock'),
+('Madonna','The Immaculate Collection', 1990, 30, 'Pop, Dance'),
+('Pink Floyd','The Wall', 1979, 30, 'Progressive rock'),
+('The Beatles','Sgt. Pepper''s Lonely Hearts Club Band', 1967, 30, 'Rock'),
+('Michael Jackson','Dangerous', 1991, 30, 'New jack swing, R&B and pop'),
+('The Beatles','Abbey Road', 1969, 30, 'Rock')
+
+
