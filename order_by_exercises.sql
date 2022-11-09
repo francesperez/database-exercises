@@ -1,11 +1,8 @@
 USE employees;
 
 # Update the query to order by first name and then last name. The first result should now be Irena Acton and the last should be Vidya Zweizig.
-SELECT emp_no, first_name, last_name, gender FROM employees WHERE (first_name = 'Irena'
-    OR first_name = 'Vidya'
-    OR first_name = 'Maya')
+SELECT * FROM employees WHERE first_name IN ('Irena','Vidya','Maya')
     AND gender = 'M'
-#   ORDER BY first_name, last_name;
     ORDER BY last_name;
 
 # Update your queries for employees with 'e' in their last name to sort the results by their employee number. Make sure the employee numbers are in the correct order.
