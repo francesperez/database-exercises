@@ -10,5 +10,9 @@ CREATE TABLE albums(
       sales FLOAT NOT NULL,
       genre VARCHAR(35) NOT NULL,
 
-      PRIMARY KEY (id)
+      PRIMARY KEY (id),
+      UNIQUE (name,artist)
 );
+
+INSERT INTO albums (artist, name, release_date, sales, genre)
+VALUES ('The Beatles','Abbey Road', 1969, 30, 'Rock');
