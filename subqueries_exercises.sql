@@ -13,29 +13,40 @@ WHERE hire_date = (
 SELECT first_name, last_name, t.title
 FROM employees AS e
     JOIN titles AS t
-    ON t.emp_no = e.emp_no
+        ON t.emp_no = e.emp_no
 WHERE first_name = 'Aamod';
 
 # Find all the current department managers that are female.
 SELECT first_name, last_name
 FROM employees
     JOIN  dept_manager as dm
-    ON employees.emp_no = dm.emp_no
+        ON employees.emp_no = dm.emp_no
 WHERE gender = 'F' AND to_date = '9999-01-01';
 
 
 # Find all the department names that currently have female managers.
 SELECT dept_name AS Departments_with_Female_Managers
 FROM employees
-         JOIN  dept_manager as dm
-         ON employees.emp_no = dm.emp_no
+        JOIN  dept_manager as dm
+            ON employees.emp_no = dm.emp_no
         JOIN departments
-        ON dm.dept_no = departments.dept_no
+            ON dm.dept_no = departments.dept_no
 WHERE gender = 'F' AND to_date = '9999-01-01';
+
 
 # Find the first and last name of the employee with the highest salary.
 SELECT first_name, last_name
 FROM employees
-    JOIN salaries s
-        ON employees.emp_no = s.emp_no
-    ORDER BY salary DESC LIMIT 1;
+WHERE emp_no = (
+   SELECT emp_no
+   FROM salaries
+   ORDER BY salary DESC
+   LIMIT 1
+    );
+
+
+# SELECT first_name, last_name
+# FROM employees
+# JOIN salaries s
+# ON employees.emp_no = s.emp_no
+# ORDER BY salary DESC LIMIT 1;
