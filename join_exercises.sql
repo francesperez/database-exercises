@@ -47,7 +47,8 @@ FROM employees as e
     ON de.emp_no = e.emp_no
    JOIN  departments as d
        on de.dept_no = d.dept_no
+   JOIN dept_manager AS dm
+        ON d.dept_no = dm.dept_no
     JOIN employees as managers
     ON managers.emp_no = e.emp_no;
-
 
